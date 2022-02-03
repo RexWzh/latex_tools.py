@@ -13,7 +13,7 @@
 
 1. 生成前 8 阶二项式系数表格的 LaTeX 代码
 
-2. 方法一，使用 LaTeX 的 `table` 环境
+2. 方法一， LaTeX 的 `table` 环境
     ```py
     from latextool import latex_table
     n = 8
@@ -24,7 +24,7 @@
     输出效果：表格效果为首行深色，其余各行“灰白交替”
     ![binomial](https://cdn.jsdelivr.net/gh/RexWzh/PicBed@picgo/picgo_folder/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20210923203428.png)
 
-3. 方法二，使用 LaTeX 的 `array` 环境
+3. 方法二， LaTeX 的 `array` 环境
     ```py
     from latextool import latex_array_table
     n = 8
@@ -41,32 +41,22 @@
 ### LaTeX 矩阵
 
 1. 计算矩阵的 5 次幂，并导出 LaTeX 代码
-    $$
-    \begin{align*}
-    \left(\begin{array}{ccc}
-    1&2&3\\
-    2&3&4\\
-    4&5&6
-    \end{array}\right)
-    \end{align*}
-    $$
+    ![深度截图_选择区域_20220203104314](https://cdn.jsdelivr.net/gh/zhihongecnu/PicBed2/picgo/深度截图_选择区域_20220203104314.png)
 
-2. 输入如下：
+2. 输入：
     ```py
     from latextool import latex_matrix
     mat = matrix([[1,2,3],[2,3,4],[4,5,6]]) # matrix 为 sagemath 自带函数
     latex_matrix(list(mat^5))
     ```
 
-3. tex 代码效果：
-    输出：
+3. tex 效果：
     ![matrix](https://cdn.jsdelivr.net/gh/RexWzh/PicBed@picgo/picgo_folder/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20210923215320.png)
 
-> 注：示例为 sagemath 代码；实际上，sagemath 自带数据转 tex 格式，但样式固定。
 
 ###  Markdown 表格
 
-1. 示例，打印表格，输入如下：
+1. 打印表格，输入如下：
     ```py
     from latextool import markdown_table, MDtable_to_array_table
     ### 方法一 指定 title ###
